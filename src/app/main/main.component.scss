@@ -66,8 +66,9 @@ body{
 .picvote2,.picvote1 {
     display: flex; /* เพิ่ม display: flex; */
     justify-content: center; /* เพิ่ม justify-content: center; */
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    // border-radius: 5%;
     overflow: hidden;
     background-size: contain; /* เปลี่ยนจาก cover เป็น contain */
     background-position: center;
