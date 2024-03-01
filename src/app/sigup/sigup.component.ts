@@ -4,10 +4,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button'
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { lastValueFrom } from 'rxjs';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-sigup',
   standalone: true,
-  imports: [MatInputModule,MatFormFieldModule,MatButtonModule,FormsModule,MatSelectModule],
+  imports: [MatInputModule,MatFormFieldModule,MatButtonModule,FormsModule,MatSelectModule,HttpClientModule],
   templateUrl: './sigup.component.html',
   styleUrl: './sigup.component.scss'
 })
@@ -24,11 +26,18 @@ export class SigupComponent {
     { value: 2, name: 'Male' }
   ];
 
-  addNew() {
-    throw new Error('Method not implemented.');
-    }
-
+  constructor(private http: HttpClient) {}
+ 
+  async addNew() {
+    const body = {
+     //เรียก this
+    };
+    const url = 'http://localhost:3000/user'+ this.name;
+    const response = await lastValueFrom(this.http.put(url, JSON.stringify(body) ));
+    console.log(response);
+  }
 }
+
 interface Gender {
   value: number;
   name: string;
