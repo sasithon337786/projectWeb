@@ -9,4 +9,5 @@ export const routes: Routes = [
     {path: '', component: MainComponent},
     {path: 'top10', component: Top10Component},
     {path: 'main', component: MainComponent},
+    {path: 'login/id', component: LoginComponent},
 ];

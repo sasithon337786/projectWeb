@@ -5,27 +5,25 @@ import { MatButtonModule } from '@angular/material/button';
 import { UserGetResponse } from '../model/user_get';
 import { lastValueFrom } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { UserService } from '../services/api/user.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatInputModule, MatFormFieldModule, MatButtonModule],
+  imports: [MatInputModule, MatFormFieldModule, MatButtonModule,HttpClientModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private route: Router , protected shareData : UserService) {}
   user: UserGetResponse[] = [];
   
-  async findName(name: HTMLInputElement) {
-    const url = 'http://localhost:3000/user';
-    const data = await lastValueFrom(
-      this.http.get(url, {
-        params: {
-          name: name.value,
-        },
-      })
-    );
-    this.user = data as UserGetResponse[];
-    console.log(this.user);
+
+  login(name : string , password : string){
+    
   }
+  
+
+  
+
 }

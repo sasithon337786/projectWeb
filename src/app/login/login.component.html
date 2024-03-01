@@ -15,7 +15,8 @@
             <input matInput #user_pass/>
         </mat-form-field>
 
-        <button (click)="findName(name)">FindName</button>
+        <button (click)="login(name.value,user_pass.value)">Login</button>
+
         <a  onclick=" routerLink" href="/sigup">Dont have a account? Sign up</a>
     </div>
 
