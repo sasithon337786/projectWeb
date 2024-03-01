@@ -6,16 +6,16 @@
         Cat breed vote</h1>
 
         <mat-form-field class="inp" appearance="outline">
-            <mat-label>Email</mat-label>
-            <input matInput type="text" id="email">
+            <mat-label>Name</mat-label>
+            <input matInput #name />
         </mat-form-field>
         
         <mat-form-field class="inp" appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput type="password" id="password">
+            <input matInput #user_pass/>
         </mat-form-field>
 
-        <button type="submit">Login</button>
+        <button (click)="findName(name)">FindName</button>
         <a  onclick=" routerLink" href="/sigup">Dont have a account? Sign up</a>
     </div>
 
