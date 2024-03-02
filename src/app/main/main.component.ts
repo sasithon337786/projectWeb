@@ -10,10 +10,5 @@ import { UserService } from '../services/api/user.service';
 })
 export class MainComponent {
 
-constructor(protected shared : UserService){
   
-}
-
-
-
 }
