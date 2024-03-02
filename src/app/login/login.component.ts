@@ -20,10 +20,6 @@ export class LoginComponent {
   
 
   login(name : string , password : string){
-    
+    this.route.navigate(['/main'])
   }
-  
-
-  
-
 }

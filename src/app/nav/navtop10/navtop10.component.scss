@@ -4,7 +4,9 @@
           display: flex;
           flex-direction: row;
           justify-content:space-between;
-          margin-left: 65%;
+          margin-left: 63%;
+          padding: 0 20px;
+          
   }
   .logo img {
     vertical-align: middle;
@@ -12,13 +14,14 @@
     width: 50px;
     margin-right: 10px; 
   }
-  .logo1 img {
+   img {
     vertical-align: middle; 
     border-radius: 50%;
     width: 50px;
     margin-right: 10px;
+   
   }
-  
+
   .toolbar-text {
     color: azure;
       cursor: pointer;
